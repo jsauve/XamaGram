@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{04A5CCC4-FDED-49D0-9906-F5042EE0B34E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Instagram.Models</RootNamespace>
+    <AssemblyName>InstagramModels</AssemblyName>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Caption.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Comments.cs" />
+    <Compile Include="Count.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Likes.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Media.cs" />
+    <Compile Include="Meta.cs" />
+    <Compile Include="Pagination.cs" />
+    <Compile Include="Realtime.cs" />
+    <Compile Include="Relationship.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Responses\CommentResponse.cs" />
+    <Compile Include="Responses\CommentsResponse.cs" />
+    <Compile Include="Responses\IResponse.cs" />
+    <Compile Include="Responses\LikesResponse.cs" />
+    <Compile Include="Responses\LocationResponse.cs" />
+    <Compile Include="Responses\LocationsResponse.cs" />
+    <Compile Include="Responses\MediaResponse.cs" />
+    <Compile Include="Responses\MediasResponse.cs" />
+    <Compile Include="Responses\OAuthResponse.cs" />
+    <Compile Include="Responses\RelationshipResponse.cs" />
+    <Compile Include="Responses\SubscriptionsResponse.cs" />
+    <Compile Include="Responses\TagResponse.cs" />
+    <Compile Include="Responses\TagsResponse.cs" />
+    <Compile Include="Responses\TestResponse.cs" />
+    <Compile Include="Responses\UserResponse.cs" />
+    <Compile Include="Responses\UsersResponse.cs" />
+    <Compile Include="Converters\DateTimeExtensions.cs" />
+    <Compile Include="Converters\Int64Extensions.cs" />
+    <Compile Include="Converters\UnixDateTimeConverter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>..\..\packages\Microsoft.Bcl.Compression.3.9.85\lib\portable-net45+win8+wp8+wpa81\System.IO.Compression.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
+</Project>
