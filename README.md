@@ -23,3 +23,6 @@ In the App.cs in the XamaGram project, you'll see a section where you can enter 
             redirectUrl: "");
             
 That's it! You should now be able to build your app for either iOS or Android. The first time you login, Instagram will prompt you to authorize the app. This only happens once and occurs for any app that uses the Instagram API.
+
+## Attribution
+This project uses a portion of the InstaSharp project, a C# wrapper for the Instagram API. I found that their client implementation wasn't working for me, so I just borrowed their model classes and wrote my own simple ligtweight HttpClient implementation for the Instagram API. InstaSharp source can be found here: https://github.com/InstaSharp/InstaSharp
