@@ -21,10 +21,10 @@ In the App.cs in the XamaGram project, you'll see a section where you can enter 
 
     XamarinAuthSettings = 
         new OAuthSettings(
-            clientId: "",
+            clientId: "[your client id]",
             scope: "basic",
             authorizeUrl: "https://api.instagram.com/oauth/authorize/",
-            redirectUrl: "");
+            redirectUrl: "[your redirect url]");
             
 That's it! You should now be able to build your app for either iOS or Android. The first time you login, Instagram will prompt you to authorize the app. This only happens once and occurs for any app that uses the Instagram API.
 
