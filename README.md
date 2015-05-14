@@ -1,5 +1,5 @@
 # XamaGram
-A Xamarin.Forms demo that uses the Instagram API as a data source. 16 hours of development is all it took to get the app to this initial state.
+A Xamarin.Forms demo that uses the Instagram API as a data source. 16 hours of development is all it took to get the app to its initial state of seven functional screens.
 
 ## Screenshots
 ![Android_iOS_Combined](https://rawgit.com/jsauve/XamaGram/master/screenshots/Android_iOS_combined.png)
