@@ -44,6 +44,7 @@ This project uses a portion of the InstaSharp project, a C# wrapper for the Inst
 * Add pagination to relevant InstagramClient methods to support more than 30 images in each list.
 * Add pull-to-refresh to relevant screens.
 * Correct excessively large ActivityIndicator on Android
+* Update login to store Instagram token in device keychain, thus avoiding the login prompt on each run of the app.
 * Add an image detail page for displaying descriptions, likes, comments, time since post, etc.
 * Add dropshadow to overlaid image labels (using Xamarin-Forms-Labs extension).
 * Add the Xamarin-Forms-Labs extension that allows device-specific screen width detection at runtime.
