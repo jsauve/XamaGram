@@ -14,7 +14,7 @@ http://bit.ly/1AXNjpO
 * Xamarin Studio or Visual Studio w/ Xamarin extensions (I used Xamarin Studio for this)
 
 ## How to setup
-You'll need an Instagram account. Login via the web and go to https://instagram.com/developer/clients/manage/
+You'll need an Instagram account. Login via the web and go to https://instagram.com/developer/clients/manage/.
 There you can create a new set of client credentials for your app.
 
 In the App.cs in the XamaGram project, you'll see a section where you can enter the Instagram Client ID and Redirect URL you just created.
