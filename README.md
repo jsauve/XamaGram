@@ -32,7 +32,7 @@ That's it! You should now be able to build your app for either iOS or Android. T
 This project uses a portion of the InstaSharp project, a C# wrapper for the Instagram API. I found that their client implementation wasn't working for me, so I just borrowed their model classes and wrote my own simple lightweight HttpClient implementation for the Instagram API. InstaSharp source can be found here: https://github.com/InstaSharp/InstaSharp
 
 ## Caveats and known issues
-* At this time, the app does not take advantage of pagination in the Instagram API, so it only loads of max of 30 images in each list (which is the maximum page size that Instagram prefers API consumers to adhere to).
+* At this time, the app does not take advantage of pagination in the Instagram API, so it only loads a max of 30 images in each list (which is the maximum page size that Instagram prefers API consumers to adhere to).
 * The image widths don't go the screen edges on some devices, and may be cut off on smaller devices. This will be remedied when I add some of the great Xamarin.Forms extensions from: https://github.com/XLabs/Xamarin-Forms-Labs
 * The app currently does not store the Instagram API token in the device keychain, so you have to login each time the app starts.
 * The app does not provide a logout function, so there is no way to logout besides "killing" the app.
