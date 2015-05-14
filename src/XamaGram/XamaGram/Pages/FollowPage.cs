@@ -33,14 +33,14 @@ namespace XamaGram
 					{
 					case FollowType.Followers:
 						// fetch my followers
-						usersResponse = await App.InstagramClient.GetFollowers(_UserId);
+						usersResponse = await App.InstagramClient.GetFollowersAsync(_UserId);
 
 						// build the listview for my followers
 						PopulateFollowItems(usersResponse.Data.Where(x => !x.ProfilePicture.Contains("anonymousUser")));
 						break;
 					case FollowType.Following:
 						// fetch who I'm following
-						usersResponse = await App.InstagramClient.GetFollowing(_UserId);
+						usersResponse = await App.InstagramClient.GetFollowingAsync(_UserId);
 
 						// build the listview for who I'm following
 						PopulateFollowItems(usersResponse.Data.Where(x => !x.ProfilePicture.Contains("anonymousUser")));

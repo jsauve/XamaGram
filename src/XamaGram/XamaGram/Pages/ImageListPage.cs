@@ -30,15 +30,15 @@ namespace XamaGram
 					switch (_FollowType)
 					{
 					case ImageListType.MyFeed:
-						imageResponse = await App.InstagramClient.GetMyFeed();
+						imageResponse = await App.InstagramClient.GetMyFeedAsync();
 						break;
 					case ImageListType.Popular:
 						// fetch my followers
-						imageResponse = await App.InstagramClient.GetPopular();
+						imageResponse = await App.InstagramClient.GetPopularAsync();
 						break;
 					case ImageListType.Liked:
 						// fetch who I'm following
-						imageResponse = await App.InstagramClient.GetMyLiked();
+						imageResponse = await App.InstagramClient.GetMyLikedAsync();
 						break;
 					}
 					PopulateImageItems(imageResponse.Data);

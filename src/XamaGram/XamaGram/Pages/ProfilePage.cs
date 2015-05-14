@@ -188,18 +188,18 @@ namespace XamaGram
 
 					if (_InstagramUserId == null) {
 						// fetch the authenticated user details from Instagram
-						userResponse = await App.InstagramClient.GetMyUser();
+						userResponse = await App.InstagramClient.GetMyUserAsync();
 					}
 					else {
 						// fetch the user details from Instagram for the given userId
-						userResponse = await App.InstagramClient.GetUser(_InstagramUserId);
+						userResponse = await App.InstagramClient.GetUserAsync(_InstagramUserId);
 					}
 
 					// build the user detail portion of the screen
 					PopulateProfileHeader(userResponse.Data);
 
 					// fetch the authenticated user's recent images from Instagram
-					var mediaResponse = await App.InstagramClient.GetRecent(userResponse.Data.Id);
+					var mediaResponse = await App.InstagramClient.GetRecentAsync(userResponse.Data.Id);
 					PopulateRecentMedia(mediaResponse.Data);
 				} catch (Exception) {
 					Content = null;	

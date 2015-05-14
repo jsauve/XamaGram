@@ -8,7 +8,7 @@ namespace Instagram.Client
 {
 	internal class ResponseFetcher<T> where T : IInstagramResponse
 	{
-		string _BaseUri;
+		readonly string _BaseUri;
 
 		public ResponseFetcher(string baseUri)
 		{

@@ -17,7 +17,7 @@ namespace Instagram.Client
 
 		#region IIGClient implementation
 
-		public async Task<UserResponse> GetUser(string userId)
+		public async Task<UserResponse> GetUserAsync(string userId)
 		{
 			string requestUri = String.Format ("users/{0}/?access_token={1}", userId, _AccessToken);
 
@@ -25,12 +25,12 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<UserResponse> GetMyUser()
+		public async Task<UserResponse> GetMyUserAsync()
 		{
-			return await GetUser("self");
+			return await GetUserAsync("self").ConfigureAwait(false);
 		}
 
-		public async Task<MediasResponse> GetMyFeed(int count = 30)
+		public async Task<MediasResponse> GetMyFeedAsync(int count = 30)
 		{
 			string requestUri = String.Format ("users/self/feed?access_token={0}&count={1}", _AccessToken, count);
 
@@ -38,7 +38,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<MediasResponse> GetRecent(string userId, int count = 30)
+		public async Task<MediasResponse> GetRecentAsync(string userId, int count = 30)
 		{
 			string requestUri = String.Format ("users/{0}/media/recent/?access_token={1}&count={2}", userId, _AccessToken, count);
 
@@ -46,7 +46,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<MediasResponse> GetMyLiked(int count = 30)
+		public async Task<MediasResponse> GetMyLikedAsync(int count = 30)
 		{
 			string requestUri = String.Format ("users/self/media/liked?access_token={0}&count={1}", _AccessToken, count);
 
@@ -54,7 +54,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<UsersResponse> GetFollowers(string userId)
+		public async Task<UsersResponse> GetFollowersAsync(string userId)
 		{
 			string requestUri = String.Format ("users/{0}/followed-by?access_token={1}", userId, _AccessToken);
 
@@ -62,7 +62,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<UsersResponse> GetFollowing(string userId)
+		public async Task<UsersResponse> GetFollowingAsync(string userId)
 		{
 			string requestUri = String.Format ("users/{0}/follows?access_token={1}", userId, _AccessToken);
 
@@ -70,7 +70,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<MediaResponse> GetMediaById(string mediaId)
+		public async Task<MediaResponse> GetMediaByIdAsync(string mediaId)
 		{
 			string requestUri = String.Format ("media/{0}?access_token={1}", mediaId, _AccessToken);
 
@@ -78,7 +78,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<MediaResponse> GetMediaByShortCode(string shortCode)
+		public async Task<MediaResponse> GetMediaByShortCodeAsync(string shortCode)
 		{
 			string requestUri = String.Format ("media/shortcode/{0}?access_token={1}", shortCode, _AccessToken);
 
@@ -86,7 +86,7 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
-		public async Task<MediasResponse> GetPopular()
+		public async Task<MediasResponse> GetPopularAsync()
 		{
 			string requestUri = String.Format ("media/popular?access_token={0}", _AccessToken);
 
