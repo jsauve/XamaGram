@@ -1,5 +1,5 @@
 # XamaGram
-A Xamarin.Forms demo that uses the Instagram API as a data source.
+A Xamarin.Forms demo that uses the Instagram API as a data source. 16 hours of development is all it took to get the app to this initial state.
 
 ## Screenshots
 ![Android_iOS_Combined](https://rawgit.com/jsauve/XamaGram/master/screenshots/Android_iOS_combined.png)
@@ -14,7 +14,7 @@ http://bit.ly/1AXNjpO
 * Xamarin Studio or Visual Studio w/ Xamarin extensions (I used Xamarin Studio for this)
 
 ## How to setup
-You'll need an Instagram account. Login via the web and go to https://instagram.com/developer/clients/manage/
+You'll need an Instagram account. Login via the web and go to https://instagram.com/developer/clients/manage/.
 There you can create a new set of client credentials for your app.
 
 In the App.cs in the XamaGram project, you'll see a section where you can enter the Instagram Client ID and Redirect URL you just created.
@@ -32,10 +32,14 @@ That's it! You should now be able to build your app for either iOS or Android. T
 This project uses a portion of the InstaSharp project, a C# wrapper for the Instagram API. I found that their client implementation wasn't working for me, so I just borrowed their model classes and wrote my own simple lightweight HttpClient implementation for the Instagram API. InstaSharp source can be found here: https://github.com/InstaSharp/InstaSharp
 
 ## Caveats and known issues
-* At this time, the app does not take advantage of pagination in the Instagram API, so it only loads of max of 30 images in each list (which is the maximum page size that Instagram prefers API consumers to adhere to.)
+* At this time, the app does not take advantage of pagination in the Instagram API, so it only loads of max of 30 images in each list (which is the maximum page size that Instagram prefers API consumers to adhere to).
 * The image widths don't go the screen edges on some devices, and may be cut off on smaller devices. This will be remedied when I add some of the great Xamarin.Forms extensions from: https://github.com/XLabs/Xamarin-Forms-Labs
 * The app currently does not store the Instagram API token in the device keychain, so you have to login each time the app starts.
 * The app does not provide a logout function, so there is no way to logout besides "killing" the app.
 
 ## Roadmap
-Hopefully this project will continue to evolve and grow and flex more of the Xamarin.Forms framework, but I have no definite roadmap at this time.
+* Add an image detail page for displaying descriptions, likes, comments, time since post, etc.
+* Add dropshadow to overlaid image labels (using Xamarin-Forms-Labs extension).
+* Add the Xamarin-Forms-Labs extension that allows device-specific screen width detection at runtime.
+* Add optional grid layouts for display of followers/following and image lists.
+* Add navigation of followers/following user graph by extending the ProfilePage to be shown for users other than just the authenticated user. May involve a custom BindableProperty on ProfilePage, to facilitate use within a DataTemplate.
