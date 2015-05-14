@@ -42,4 +42,4 @@ This project uses a portion of the InstaSharp project, a C# wrapper for the Inst
 * Add dropshadow to overlaid image labels (using Xamarin-Forms-Labs extension).
 * Add the Xamarin-Forms-Labs extension that allows device-specific screen width detection at runtime.
 * Add optional grid layouts for display of followers/following and image lists.
-* Add navigation of followers/following user graph by extending the ProfilePage to be shown for users other than just the authenticated user.
+* Add navigation of followers/following user graph by extending the ProfilePage to be shown for users other than just the authenticated user. Mmay involve a custom BindableProperty on ProfilePage.
