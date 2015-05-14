@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Instagram.Models.Responses {
-    public class MediasResponse : IResponse {
+    public class MediasResponse : IInstagramResponse {
         public Pagination Pagination { get; set; }
         public Meta Meta { get; set; }
         public List<Media> Data { get; set; }   

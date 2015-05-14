@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System;
 
 namespace Instagram.Models {
-    public class Media {
+	public class Media {
         public Location Location { get; set; }
         public Comments Comments { get; set; }
         public Caption Caption { get; set; }

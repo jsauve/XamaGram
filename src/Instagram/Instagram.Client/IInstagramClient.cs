@@ -1,6 +1,4 @@
-﻿using System;
-using Instagram.Models;
-using Instagram.Models.Responses;
+﻿using Instagram.Models.Responses;
 using System.Threading.Tasks;
 
 namespace Instagram.Client

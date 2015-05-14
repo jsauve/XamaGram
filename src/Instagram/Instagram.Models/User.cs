@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Instagram.Models {
     public class User : UserInfo
     {

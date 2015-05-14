@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Instagram.Models.Responses {
-    public class TagsResponse : IResponse {
+    public class TagsResponse : IInstagramResponse {
         public Meta Meta { get; set; }
         public List<Tag> Data { get; set; }
     }

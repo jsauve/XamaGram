@@ -36,7 +36,6 @@ namespace XamaGram
 						usersResponse = await App.InstagramClient.GetFollowers(_UserId);
 
 						// build the listview for my followers
-//						PopulateFollowItems(usersResponse.Data);
 						PopulateFollowItems(usersResponse.Data.Where(x => !x.ProfilePicture.Contains("anonymousUser")));
 						break;
 					case FollowType.Following:
@@ -44,7 +43,6 @@ namespace XamaGram
 						usersResponse = await App.InstagramClient.GetFollowing(_UserId);
 
 						// build the listview for who I'm following
-//						PopulateFollowItems(usersResponse.Data);
 						PopulateFollowItems(usersResponse.Data.Where(x => !x.ProfilePicture.Contains("anonymousUser")));
 						break;
 					}

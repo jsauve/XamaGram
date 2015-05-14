@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-namespace Instagram.Models.Responses {
-    public interface IResponse {
+﻿namespace Instagram.Models.Responses {
+    public interface IInstagramResponse {
         Meta Meta { get; set; }
     }
 }

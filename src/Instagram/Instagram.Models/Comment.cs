@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-
 namespace Instagram.Models {
     public class Comment {
         [JsonProperty("created_time"), JsonConverter(typeof(UnixDateTimeConverter))]
