@@ -38,6 +38,9 @@ This project uses a portion of the InstaSharp project, a C# wrapper for the Inst
 * The app does not provide a logout function, so there is no way to logout besides "killing" the app.
 
 ## Roadmap
+* Add proper exception handling
+* Add network connectivity checking
+* Add Xamarin Insights integration point (optionally enabled)
 * Add an image detail page for displaying descriptions, likes, comments, time since post, etc.
 * Add dropshadow to overlaid image labels (using Xamarin-Forms-Labs extension).
 * Add the Xamarin-Forms-Labs extension that allows device-specific screen width detection at runtime.
