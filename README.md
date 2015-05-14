@@ -42,6 +42,7 @@ This project uses a portion of the InstaSharp project, a C# wrapper for the Inst
 * Add network connectivity checking.
 * Add Xamarin Insights integration point (optionally enabled).
 * Add pagination to relevant InstagramClient methods to support more than 30 images in each list.
+* (Possibly) add image pre-cahcing to eliminate "jumping" of images during scrolling, especially on slower network connections.
 * Add pull-to-refresh to relevant screens.
 * Correct excessively large ActivityIndicator on Android
 * Update login to store Instagram token in device keychain, thus avoiding the login prompt on each run of the app.
