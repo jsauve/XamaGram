@@ -1,5 +1,5 @@
 # XamaGram
-A Xamarin.Forms demo that uses the Instagram API as a data source. 16 hours of development is all it took to get the app to its initial state of seven functional screens.
+A Xamarin.Forms demo that uses the Instagram API as a data source. Login with any Instagram account! 16 hours of development is all it took to get the app to its initial state of seven functional screens.
 
 ## Screenshots
 ![Android_iOS_Combined](https://rawgit.com/jsauve/XamaGram/master/screenshots/Android_iOS_combined.png)
@@ -41,6 +41,7 @@ This project uses a portion of the InstaSharp project, a C# wrapper for the Inst
 * Add proper exception handling
 * Add network connectivity checking
 * Add Xamarin Insights integration point (optionally enabled)
+* Add pagination to relevant InstagramClient methods to support more than 30 images in each list
 * Add an image detail page for displaying descriptions, likes, comments, time since post, etc.
 * Add dropshadow to overlaid image labels (using Xamarin-Forms-Labs extension).
 * Add the Xamarin-Forms-Labs extension that allows device-specific screen width detection at runtime.
